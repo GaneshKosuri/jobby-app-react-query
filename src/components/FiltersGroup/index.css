@@ -1,0 +1,94 @@
+.filters-group-container {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-group-container {
+    margin-top: 24px;
+    max-width: 280px;
+    min-width: 256px;
+  }
+}
+
+.employment-type-heading {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.75;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.employment-type-list {
+  padding-left: 0;
+}
+
+.employment-type-item {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.employment-type-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.employment-type-label {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.71;
+  cursor: pointer;
+}
+
+.horizontal-line {
+  border: 1px solid #64748b;
+  margin: 0px;
+}
+
+.salary-range-heading {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.75;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.salary-range-list {
+  padding-left: 0;
+}
+
+.salary-range-item {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.salary-range-radio-button {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  margin-top: 0px;
+  margin-right: 12px;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+.salary-range-label {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.71;
+  cursor: pointer;
+}

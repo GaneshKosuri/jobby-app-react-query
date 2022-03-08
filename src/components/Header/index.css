@@ -1,0 +1,139 @@
+.nav-header {
+  display: flex;
+  justify-content: center;
+  background-color: #272727;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-header {
+    flex-direction: column;
+    align-items: center;
+    border-bottom-style: none;
+  }
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  max-width: 1110px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    max-width: 458px;
+  }
+}
+
+.nav-bar-mobile-logo-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar-mobile-logo-container {
+    display: none;
+  }
+}
+
+.nav-bar-large-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1110px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-bar-large-container {
+    display: none;
+  }
+}
+
+.website-logo {
+  width: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .website-logo {
+    width: 124px;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+.nav-menu-list-mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  margin: 0px;
+}
+
+.nav-menu-item-mobile {
+  margin: 0px;
+  margin-left: 24px;
+  cursor: pointer;
+}
+
+.nav-item-icon {
+  color: #f8fafc;
+  width: 24px;
+  height: 24px;
+}
+
+.nav-mobile-btn {
+  border: none;
+  background: transparent;
+  padding: 0px;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-menu-item {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.nav-link {
+  color: #f8fafc;
+  text-decoration: none;
+}
+
+.logout-desktop-btn {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 12px;
+  background-color: #6366f1;
+  border: none;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-right: 32px;
+  padding-bottom: 8px;
+  padding-left: 32px;
+  cursor: pointer;
+  outline: none;
+}

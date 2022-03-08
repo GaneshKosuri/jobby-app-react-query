@@ -1,0 +1,605 @@
+[
+  {
+    "question_id": "4f15b6eb-32c4-43ec-921f-e9b408ff7c4d",
+    "ide_session_id": "ebf610e6-132c-4b0e-bc03-ecfce5b885aa",
+    "short_text": "Jobby App",
+    "question_key": "jobby_app_1",
+    "question_text": "In this project, let's build a **Jobby App** by applying the concepts we have learned till now.\n\n### Refer to videos below:\n\n<div style=\"text-align: center;\">\n  <video style=\"max-width:80%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;\" loop=\"true\" autoplay=\"autoplay\" controls=\"controls\" muted>\n    <source src=\"https://assets.ccbp.in/frontend/content/react-js/jobby-app-success-output-v0.mp4\" type=\"video/mp4\">\n  </video>\n</div>\n<br/>\n\n**Failure View** <br/>\n\n<div style=\"text-align: center;\">\n  <video style=\"max-width:80%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;\" loop=\"true\" autoplay=\"autoplay\" controls=\"controls\" muted>\n    <source src=\"https://assets.ccbp.in/frontend/content/react-js/jobby-app-failure-output-v1.mp4\" type=\"video/mp4\">\n  </video>\n</div>\n<br/>\n\n### Design Files\n\n<details>\n<summary>Login Route</summary>\n\n- [Extra Small (Size < 576px) and Small (Size >= 576px) - Login](https://assets.ccbp.in/frontend/content/react-js/jobby-app-login-sm-outputs.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Login](https://assets.ccbp.in/frontend/content/react-js/jobby-app-login-lg-output.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Login Failure](https://assets.ccbp.in/frontend/content/react-js/jobby-app-login-failure-lg-output.png)\n</details>\n\n<details>\n<summary>Home Route</summary>\n\n- [Extra Small (Size < 576px) and Small (Size >= 576px) - Home](https://assets.ccbp.in/frontend/content/react-js/jobby-app-home-sm-output.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Home](https://assets.ccbp.in/frontend/content/react-js/jobby-app-home-lg-output.png)\n</details>\n\n<details>\n<summary>Jobs Route</summary>\n\n- [Extra Small (Size < 576px) and Small (Size >= 576px) - Jobs](https://assets.ccbp.in/frontend/content/react-js/jobby-app-jobs-sm-outputs.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Jobs Success](https://assets.ccbp.in/frontend/content/react-js/jobby-app-jobs-success-lg-output-v0.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - No Jobs](https://assets.ccbp.in/frontend/content/react-js/jobby-app-no-jobs-lg-output-v0.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Profile Failure](https://assets.ccbp.in/frontend/content/react-js/jooby-app-profile-failure-lg-output-v0.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Jobs Failure](https://assets.ccbp.in/frontend/content/react-js/jobby-app-jobs-failure-lg-output-v0.png)\n</details>\n\n<details>\n<summary>Job Item Details Route</summary>\n\n- [Extra Small (Size < 576px) and Small (Size >= 576px) - Job Details Success](https://assets.ccbp.in/frontend/content/react-js/jobby-app-job-details-success-sm-output-v0.png)\n- [Extra Small (Size < 576px) and Small (Size >= 576px) - Job Details Failure](https://assets.ccbp.in/frontend/content/react-js/jobby-app-job-details-failure-sm-output.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Job Details Success](https://assets.ccbp.in/frontend/content/react-js/jobby-app-job-details-success-lg-output-v0.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Job Details Failure](https://assets.ccbp.in/frontend/content/react-js/jobby-app-job-details-failure-lg-output.png)\n</details>\n\n<details>\n<summary>Not Found Route</summary>\n\n- [Extra Small (Size < 576px) and Small (Size >= 576px) - Not Found](https://assets.ccbp.in/frontend/content/react-js/jobby-app-not-found-sm-output-v0.png)\n- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Not Found](https://assets.ccbp.in/frontend/content/react-js/jobby-app-not-found-lg-output-v0.png)\n</details>\n\n### Set Up Instructions\n\n<details>\n<summary>Click to view</summary>\n\n- Download dependencies by running `npm install`\n- Start up the app using `npm start`\n</details>\n\n### Completion Instructions\n\n<details>\n<summary>Functionality to be added</summary>\n<br/>\n\nThe app must have the following functionalities\n\n- **Login Route**\n\n  - When invalid credentials are provided and the **Login** button is clicked, then the error message received from the response should be displayed\n  - When valid credentials are provided and the **Login** button is clicked, then the page should be navigated to the Home Route\n  - When an _unauthenticated_ user, tries to access the Home, Jobs and Job Item Details Route, then the page should be navigated to Login Route\n  - When an _authenticated_ user, tries to access the Home, Jobs and Job Item Details Route, then the page should be navigated to the respective route\n  - When an _authenticated_ user, tries to access the Login Route, then the page should be navigated to the Home Route\n\n- **Home Route**\n\n  - When an _authenticated_ user opens the Home Route\n    - Clicks on the **Find Jobs** button, then the page should be navigated to the Jobs Route\n\n- **Jobs Route**\n\n  - When an _authenticated_ user opens the Jobs Route\n\n    - An HTTP GET request should be made to **Profile API URL**\n      - **_loader_** should be displayed while fetching the data\n      - After the data is fetched successfully, the response received should be displayed\n      - If the HTTP GET request made is unsuccessful, then the [Failure View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-profile-failure-lg-output.png) should be displayed\n        - When the **Retry** button is clicked, an HTTP GET request should be made to **Profile API URL**\n    - An HTTP GET request should be made to **Jobs API URL** with `employment_type`, `minimum_package`, and `search` as query parameters with empty strings as initial values\n      - **_loader_** should be displayed while fetching the data\n      - After the data is fetched successfully, display the list of jobs received from the response\n      - If the HTTP GET request made is unsuccessful, then the [Failure View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-jobs-failure-lg-output.png) should be displayed\n        - When the **Retry** button is clicked, an HTTP GET request should be made to **Jobs API URL**\n    - When a value is provided in the search input and search icon button is clicked\n      - Make an HTTP GET request to the **Jobs API URL** with `jwt_token` in the Cookies and query parameter `search` with value as the text provided in the search input\n      - **_loader_** should be displayed while fetching the data\n      - After the data is fetched successfully, display the list of jobs received from the response\n    - When **Employment Types** options are selected\n      - Make an HTTP GET request to the **Jobs API URL** with `jwt_token` in the Cookies and query parameter `employment_type` with value as a list of selected employment type id's as a single string separated by `,`\n      - **_loader_** should be displayed while fetching the data\n      - After the data is fetched successfully, display the list of jobs received from the response\n    - When **Salary Range** is selected\n      - Make an HTTP GET request to the **Jobs API URL** with `jwt_token` in the Cookies and query parameter `minimum_package` with value as the id of the selected salary range\n      - **_loader_** should be displayed while fetching the data\n      - After the data is fetched successfully, display the list of jobs received from the response\n    - When the HTTP GET request made to the **Jobs API URL** returns an empty list for jobs then [No Jobs View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-no-jobs-lg-output.png) should be displayed\n\n  - When multiple filters are applied, then the HTTP GET request should be made with all the filters that are applied\n  - For example: When the **Full Time** and **Part Time** employment types are selected, salary range **10 LPA and above** is selected and search input field is empty, then the **Jobs API URL** will be as follows\n\n    ```js\n    const apiUrl = 'https://apis.ccbp.in/jobs?employment_type=FULLTIME,PARTTIME&minimum_package=1000000&search='\n    ```\n\n  - When a **job** is clicked, then the page should be navigated to the Job Item Details Route\n\n- **Job Item Details Route**\n\n  - When an _authenticated_ user opens the Job Item Details Route\n    - An HTTP GET request should be made to **Job Details API URL** with `jwt_token` in the Cookies and job `id` as path parameter\n      - **_loader_** should be displayed while fetching the data\n      - After the data is fetched successfully, the response received should be displayed\n      - The list of similar jobs should be displayed\n      - If the HTTP GET request made is unsuccessful, then the [Failure View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-job-details-failure-lg-output.png) should be displayed\n        - When the **Retry** button is clicked, an HTTP GET request should be made to **Job Details API URL**\n  - When the **Visit** button is clicked, then the corresponding company website URL should be opened in a new tab\n\n- **Not Found Route**\n\n  - When a random path is provided as the URL path, then the page should be navigated to the Not Found Route\n\n- **Header**\n\n  - When the **website logo** image is clicked, then the page should be navigated to the Home Route\n  - When the **Home** link is clicked, then the page should be navigated to the Home Route\n  - When the **Jobs** link is clicked, then the page should be navigated to the Jobs Route\n  - When the **Logout** button is clicked, then the page should be navigated to the Login Route\n\n- The App is provided with `employmentTypesList`. It consists of a list of employment type objects with the following properties in each employment type object\n\n  |       Key        | Data Type |\n  | :--------------: | :-------: |\n  | employmentTypeId |  String   |\n  |      label       |  String   |\n\n- The App is provided with `salaryRangesList`. It consists of a list of salary range objects with the following properties in each salary range object\n\n  |      Key      | Data Type |\n  | :-----------: | :-------: |\n  | salaryRangeId |  String   |\n  |     label     |  String   |\n\n</details>\n\n<details>\n\n<summary>API Requests & Responses</summary>\n\n<br/>\n\n**Login API**\n\n#### API: `https://apis.ccbp.in/login`\n\n#### Method: `POST`\n\n#### Request:\n\n```json\n{\n  \"username\": \"rahul\",\n  \"password\": \"rahul@2021\"\n}\n```\n\n#### Description:\n\nReturns a response based on the credentials provided\n\n#### Sample Success Response\n\n```json\n{\n  \"jwt_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwicm9sZSI6IlBSSU1FX1VTRVIiLCJpYXQiOjE2MTk2Mjg2MTN9. nZDlFsnSWArLKKeF0QbmdVfLgzUbx1BGJsqa2kc_21Y\"\n}\n```\n\n#### Sample Failure Response\n\n```json\n{\n  \"status_code\": 404,\n  \"error_msg\": \"Username is not found\"\n}\n```\n\n**Profile API**\n\n#### API: `https://apis.ccbp.in/profile`\n\n#### Method: `GET`\n\n#### Description:\n\nReturns a response containing the profile details\n\n#### Sample Response\n\n```json\n{\n  \"profile_details\": {\n    \"name\": \"Rahul Attuluri\",\n    \"profile_image_url\": \"https://assets.ccbp.in/frontend/react-js/male-avatar-img.png\",\n    \"short_bio\": \"Lead Software Developer and AI-ML expert\"\n  }\n}\n```\n\n**Jobs API**\n\n#### API: `https://apis.ccbp.in/jobs`\n\n#### Example: `https://apis.ccbp.in/jobs?employment_type=FULLTIME,PARTTIME&minimum_package=1000000&search=`\n\n#### Method: `GET`\n\n#### Description:\n\nReturns a response containing the list of all jobs\n\n#### Sample Response\n\n```json\n{\n  \"jobs\": [\n    {\n      \"company_logo_url\": \"https://assets.ccbp.in/frontend/react-js/jobby-app/facebook-img.png\",\n      \"employment_type\": \"Full Time\",\n      \"id\": \"d6019453-f864-4a2f-8230-6a9642a59466\",\n      \"job_description\": \"We’re in search of a Back-End Software Engineer that specializes in server-side components. In this role, you’ll primarily work in NodeJs, SQL Lite, Python, AWS and GO and will bring a depth of knowledge on basic algorithms and data structures. As a Back-End Engineer, you might be architecting new features for our customers.\",\n      \"location\": \"Bangalore\",\n      \"package_per_annum\": \"21 LPA\",\n      \"rating\": 4,\n      \"title\": \"Backend Engineer\"\n    }\n    ...\n  ],\n  \"total\":25,\n}\n```\n\n**Job Details API**\n\n#### API: `https://apis.ccbp.in/jobs/:id`\n\n#### Example: `https://apis.ccbp.in/jobs/bb95e51b-b1b2-4d97-bee4-1d5ec2b96751`\n\n#### Method: `GET`\n\n#### Description:\n\nReturns a response containing the job details\n\n#### Sample Response\n\n```json\n{\n  \"job_details\": {\n    \"company_logo_url\": \"https://assets.ccbp.in/frontend/react-js/jobby-app/netflix-img.png\",\n    \"company_website_url\": \"https://about.netflix.com/en\",\n    \"employment_type\": \"Internship\",\n    \"id\": \"bb95e51b-b1b2-4d97-bee4-1d5ec2b96751\",\n    \"job_description\": \"We are looking for a DevOps Engineer with a minimum of 5 years of industry experience, preferably working in the financial IT community. The position in the team is focused on delivering exceptional services to both BU and Dev\",\n    \"skills\": [\n      {\n        \"image_url\": \"https://assets.ccbp.in/frontend/react-js/jobby-app/docker-img.png\",\n        \"name\": \"Docker\"\n      },\n      ...\n    ],\n    \"life_at_company\": {\n      \"description\": \"Our core philosophy is people over process. Our culture has been instrumental to our success. It has helped us attract and retain stunning colleagues, making work here more satisfying. Entertainment, like friendship, is a fundamental human need, and it changes how we feel and gives us common ground. We want to entertain the world.\",\n      \"image_url\": \"https://assets.ccbp.in/frontend/react-js/jobby-app/life-netflix-img.png\"\n    },\n    \"location\":\"Delhi\",\n    \"package_per_annum\":\"10 LPA\",\n    \"rating\":4\n  },\n  \"similar_jobs\": [\n    {\n      \"company_logo_url\": \"https://assets.ccbp.in/frontend/react-js/jobby-app/netflix-img.png\",\n      \"employment_type\": \"Freelance\",\n      \"id\": \"2b40029d-e5a5-48cc-84a6-b6e12d25625d\",\n      \"job_description\": \"The Experimentation Platform team builds internal tools with a big impact across the company. We are looking to add a UI engineer to our team to continue to improve our experiment analysis workflow and tools. Ideal candidates will be excited by direct contact with our users, fast feedback, and quick iteration.\",\n      \"location\": \"Delhi\",\n      \"rating\": 4,\n      \"title\": \"Frontend Engineer\"\n    },\n    ...\n  ]\n}\n```\n\n</details>\n\n### Quick Tips\n\n<details>\n<summary>Click to view</summary>\n<br>\n\n- To convert a list of items as a comma-separated string we can use the array method `join()`\n\n</details>\n\n### Important Note\n\n<details>\n<summary>Click to view</summary>\n\n<br/>\n\n**The following instructions are required for the tests to pass**\n\n- Render `Home` Route component when the path in URL matches `/`\n- Render `Login` Route component when the path in URL matches `/login`\n- Render `Jobs` Route component when the path in URL matches `/jobs`\n- Render `Job Item Details` Route component when the path in URL matches `/jobs/:id`\n- Render `Not Found` Route component when the path in URL matches `/not-found`\n- No need to use the `BrowserRouter` in `App.js` as we have already included in `index.js`\n\n- User credentials\n\n  ```text\n   username: rahul\n   password: rahul@2021\n\n  ```\n\n- Wrap the `Loader` component with an HTML container element and add the `testid` attribute value as **loader** to it\n\n  ```jsx\n  <div className=\"loader-container\" testid=\"loader\">\n    <Loader type=\"ThreeDots\" color=\"#ffffff\" height=\"50\" width=\"50\" />\n  </div>\n  ```\n\n- **Jobs Route**\n\n  - The HTML button element with search icon should have the `testid` attribute value as **searchButton** to it\n\n  ```jsx\n  <button type=\"button\" testid=\"searchButton\">\n    <BsSearch className=\"search-icon\" />\n  </button>\n  ```\n\n  - The profile image should have the alt as **profile**\n  - The company logo images in Jobs Route should have the alt as **company logo**\n\n- **Job Details Route**\n  - The company logo image should have the alt as **job details company logo**\n  - The life at company image should have the alt as **life at company**\n  - The skill images should have the alt as the value of the key `name` from each object in the **skills** list received from the job details response\n  - The company logo image in similar job item should have the alt as **similar job company logo**\n  </details>\n\n### Resources\n\n<details>\n<summary>Image URLs</summary>\n\n- [https://assets.ccbp.in/frontend/react-js/home-sm-bg.png](https://assets.ccbp.in/frontend/react-js/home-sm-bg.png)\n- [https://assets.ccbp.in/frontend/react-js/home-lg-bg.png](https://assets.ccbp.in/frontend/react-js/home-lg-bg.png)\n- [https://assets.ccbp.in/frontend/react-js/profile-bg.png](https://assets.ccbp.in/frontend/react-js/profile-bg.png)\n- [https://assets.ccbp.in/frontend/react-js/logo-img.png](https://assets.ccbp.in/frontend/react-js/logo-img.png) alt should be **website logo**\n- [https://assets.ccbp.in/frontend/react-js/failure-img.png](https://assets.ccbp.in/frontend/react-js/failure-img.png) alt should be **failure view**\n- [https://assets.ccbp.in/frontend/react-js/no-jobs-img.png](https://assets.ccbp.in/frontend/react-js/no-jobs-img.png) alt should be **no jobs**\n- [https://assets.ccbp.in/frontend/react-js/jobby-app-not-found-img.png](https://assets.ccbp.in/frontend/react-js/jobby-app-not-found-img.png) alt should be **not found**\n\n</details>\n\n<details>\n<summary>Colors</summary>\n\n<br/>\n<div style=\"background-color: #64748b; width: 150px; padding: 10px; color: white\">Hex: #64748b</div>\n<div style=\"background-color: #4f46e5; width: 150px; padding: 10px; color: white\">Hex: #4f46e5</div>\n<div style=\"background-color: #f8fafc; width: 150px; padding: 10px; color: black\">Hex: #f8fafc</div>\n<div style=\"background-color: #272727; width: 150px; padding: 10px; color: white\">Hex: #272727</div>\n<div style=\"background-color: #ffffff; width: 150px; padding: 10px; color: black\">Hex: #ffffff</div>\n<div style=\"background-color: #b6c5ff; width: 150px; padding: 10px; color: black\">Hex: #b6c5ff</div>\n<div style=\"background-color: #6366f1; width: 150px; padding: 10px; color: white\">Hex: #6366f1</div>\n<div style=\"background-color: #2c364c; width: 150px; padding: 10px; color: white\">Hex: #2c364c</div>\n<div style=\"background-color: #000000; width: 150px; padding: 10px; color: white\">Hex: #000000</div>\n<div style=\"background-color: #f1f5f9; width: 150px; padding: 10px; color: black\">Hex: #f1f5f9</div>\n<div style=\"background-color: #fbbf24; width: 150px; padding: 10px; color: white\">Hex: #fbbf24</div>\n<div style=\"background-color: #202020; width: 150px; padding: 10px; color: white\">Hex: #202020</div>\n<div style=\"background-color: #cbd5e1; width: 150px; padding: 10px; color: black\">Hex: #cbd5e1</div>\n<div style=\"background-color: #7e858e; width: 150px; padding: 10px; color: black\">Hex: #7e858e</div>\n<div style=\"background-color: #121212; width: 150px; padding: 10px; color: white\">Hex: #121212</div>\n<div style=\"background-color: #475569; width: 150px; padding: 10px; color: white\">Hex: #475569</div>\n<div style=\"background-color: #ff0b37; width: 150px; padding: 10px; color: white\">Hex: #ff0b37</div>\n<br/>\n</details>\n\n<details>\n<summary>Font-families</summary>\n\n- Roboto\n</details>\n\n> ### _Things to Keep in Mind_\n>\n> - All components you implement should go in the `src/components` directory.\n> - Don't change the component folder names as those are the files being imported into the tests.\n> - **Do not remove the pre-filled code**\n> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.\n",
+    "content_type": "MARKDOWN",
+    "toughness": "EASY",
+    "language": "ENGLISH",
+    "question_type": "IDE_BASED_CODING",
+    "question_asked_by_companies_info": [],
+    "question_format": "CODING_PRACTICE",
+    "test_cases": [
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_1",
+        "display_text": "When \"/\" is provided as the URL path by an unauthenticated user, then the page should be navigated to the Login Route and consist of an HTML button element with text content as \"Login\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_2",
+        "display_text": "When \"/\" is provided as the URL path by an authenticated user, then the page should be navigated to the Home Route and consist of an HTML main heading element with text content as \"Find The Job That Fits Your Life\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_3",
+        "display_text": "Home Route should consist of an HTML image element with alt attribute value as \"website logo\" and src as the given website logo image URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_4",
+        "display_text": "Home Route should consist of an HTML image element with alt attribute value as \"website logo\" and src as the given website logo image URL is wrapped with Link from react-router-dom",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_5",
+        "display_text": "Home Route should consist of at least one HTML unordered list element to display the list of nav items in the Header",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_6",
+        "display_text": "Home Route should consist of at least three HTML list elements to display the nav items in the Header",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_7",
+        "display_text": "Home Route should consist of a Link from react-router-dom with text content as \"Home\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_8",
+        "display_text": "Home Route should consist of a Link from react-router-dom with text content as \"Jobs\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_9",
+        "display_text": "Home Route should consist of an HTML button element with text content as \"Logout\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_10",
+        "display_text": "Home Route should consist of an HTML main heading element with text content as \"Find The Job That Fits Your Life\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_11",
+        "display_text": "Home Route should consist of an HTML paragraph element with text content starting with \"Millions of people are searching for jobs\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_12",
+        "display_text": "Home Route should consist of an HTML button element with text content as \"Find Jobs\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_13",
+        "display_text": "Home Route should consist of an HTML button element with text content as \"Find Jobs\" is wrapped with Link from react-router-dom",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_14",
+        "display_text": "When the Find Jobs button in the Home Route is clicked, then the page should be navigated to Jobs Route",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_15",
+        "display_text": "When the Jobs link in the Header is clicked, then the page should be navigated to Jobs Route",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_16",
+        "display_text": "When the Logout button in the Header is clicked, then the Cookies.remove() method should be called with the argument as \"jwt_token\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_17",
+        "display_text": "When the Logout button in the Header is clicked, the history.replace() method should be called with the argument as \"/login\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_18",
+        "display_text": "When the Logout button in the Header is clicked, then the page should be navigated to the Login Route",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_19",
+        "display_text": "When HTTP GET request in the Job Item Details Route is successful, then the page should consist of at least two HTML list items and the skills list and similar jobs list received from the response should be rendered using a unique key as a prop to display each skill and similar job respectively",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_20",
+        "display_text": "When \"/jobs/:id\" is provided as the URL path by an unauthenticated user, then the page should be navigated to the Login Route and consist of an HTML button element with text content as \"Login\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_21",
+        "display_text": "Job Item Details Route should consist of an HTML image element with alt attribute value as \"website logo\" and src as the given website logo image URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_22",
+        "display_text": "When the Job Item Details Route is opened, it should initially consist of an HTML container element with testid attribute value as \"loader\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_23",
+        "display_text": "When the Job Item Details Route is opened, an HTTP GET request should be made to the given Job Details API URL with the job id as the path parameter",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_24",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML image element with alt attribute value as \"job details company logo\" and src as the value of key \"company_logo_url\" in job_details received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_25",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML image element with text content as the value of the key \"title\" in job_details received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_26",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML paragraph element with text content as the value of the key \"rating\" in job_details received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_27",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML paragraph element with text content as the value of the key \"location\" in job_details received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_28",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML paragraph element with text content as the value of the key \"employment_type\" in job_details received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_29",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML paragraph element with text content as the value of the key \"package_per_annum\" in job_details received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_30",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of at least four HTML main heading elements with text content as \"Description\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_31",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML paragraph element with text content as the value of the key \"job_description\" in job_details received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_32",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML anchor element with href attribute value of the key \"company_website_url\" and text content as \"Visit\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_33",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML main heading element with text content as \"Skills\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_34",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of at least three HTML unordered list elements to display nav item, skills and similar jobs received from the response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_35",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of HTML image elements with alt attribute value as the values of the key \"name\" and src as the values of the key \"image_url\" in the \"skills\" list received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_36",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML main heading element with text content as \"Life at Company\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_37",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML paragraph element with text content as the value of the key \"description\" in \"life_at_company\" from job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_38",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML image element with alt attribute value as \"life at company\" and src as the value of the key \"image_url\" in \"life_at_company\" from job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_39",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of an HTML main heading element with text content as \"Similar Jobs\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_40",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of HTML image elements with alt attribute value as \"similar job company logo\" and src as the values of the key \"company_logo_url\" in similar_jobs received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_41",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of HTML main heading elements with text content as the values of the key \"title\" in similar_jobs received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_42",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of HTML paragraph elements with text content as the values of the key \"rating\" in similar_jobs received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_43",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of HTML paragraph elements with text content as the value of the key \"location\" in similar_jobs received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_44",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of HTML paragraph elements with text content as the value of the key \"employment_type\" in similar_jobs received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_45",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is successful, then the page should consist of HTML paragraph elements with text content as the value of the key \"job_description\" in similar_jobs received from the job details response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_46",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is unsuccessful, then the page should consist of an HTML image element with alt attribute value as \"failure view\" and src as the given failure view image URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_47",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is unsuccessful, then the page should consist of an HTML main heading element with text content as \"Oops! Something Went Wrong\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_48",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is unsuccessful, then the page should consist of an HTML paragraph element with text content as \"We cannot seem to find the page you are looking for\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_49",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is unsuccessful, then the page should consist of an HTML button element with text content as \"Retry\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_50",
+        "display_text": "When the HTTP GET request in the Job Item Details Route is unsuccessful and the \"Retry\" button is clicked, then an HTTP GET request should be made to the given Job Details API URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_51",
+        "display_text": "Page should consist of at least two HTML list items, jobs list received from the response and the provided employmentTypesList, salaryRangesList should be rendered using a unique key as a prop for each employment type item, salary range item and job item respectively",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_52",
+        "display_text": "When \"/jobs\" is provided as the URL path by an unauthenticated user, then the page should be navigated to the Login Route and consist of an HTML button element with text content as \"Login\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_53",
+        "display_text": "When \"/jobs\" is provided in the URL path by an authenticated user, then the page should be navigated to the Jobs Route and should consist of an HTML main heading element with text content as \"Type of Employment\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_54",
+        "display_text": "Jobs Route should consist of an HTML image element with alt attribute value as \"website logo\" and src as given website logo image URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_55",
+        "display_text": "Jobs Route should consist of an HTML input element with type attribute value as \"search\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_56",
+        "display_text": "Jobs Route should consist of an HTML button element with testid attribute value as \"searchButton\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_57",
+        "display_text": "Jobs Route should consist of an HTML main heading element with text content as \"Type of Employment\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_58",
+        "display_text": "Jobs Route should consist of HTML checkboxes with label text as the values of the key \"label\" from employmentTypesList provided",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_59",
+        "display_text": "Jobs Route should consist of an HTML main heading element with text content as \"Salary Range\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_60",
+        "display_text": "Jobs Route should consist of HTML radio buttons and label text as the values of the key \"label\" from salaryRangesList provided",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_61",
+        "display_text": "When the Jobs Route is opened, it should initially consist of HTML container elements with testid attribute value as \"loader\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_62",
+        "display_text": "When the Jobs Route is opened, an HTTP GET request should be made to the given Profile API URL to display the profile details",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_63",
+        "display_text": "When the Jobs Route is opened, an HTTP GET request should be made to the given Jobs API URL to display the list of jobs",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_64",
+        "display_text": "When the Jobs Route is opened, an HTTP GET request should be made to the given Jobs API URL with all the query parameters and their initial values as empty strings",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_65",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of at least four HTML unordered list elements to display nav items, jobs received from the response, employmentTypes and salaryRanges",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_66",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of an HTML image element with alt attribute value as \"profile\" and src as the value of key \"profile_image_url\" received from the profile response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_67",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of an HTML main heading element with text content as the values of the key \"name\" received from the profile response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_68",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of an HTML paragraph element with text content as the values of the key \"short_bio\" received from the profile response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_69",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of HTML image elements with alt attribute value as \"company logo\" and src as the values of key \"company_logo_url\" received from the jobs response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_70",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of HTML main heading elements with text content as the values of the key \"title\" received from the jobs response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_71",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of HTML paragraph elements with text content as the value of the key \"rating\" received from the jobs response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_72",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of HTML paragraph elements with text content as the values of the key \"location\" received from the jobs response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_73",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of HTML paragraph elements with text content as the values of the key \"employment_type\" received from the jobs response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_74",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of HTML main heading elements with text content as the \"Description\" based on the received jobs response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_75",
+        "display_text": "When the HTTP GET requests in the Jobs Route are successful, then the page should consist of HTML paragraph elements with text content as the values of the key \"job_description\" received from the jobs response",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_76",
+        "display_text": "When a value is provided in the HTML input element for search and search icon button is clicked, an HTTP GET request should be made with the value provided in the search input element as the value to query parameter \"search\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_77",
+        "display_text": "When employment types are selected, an HTTP GET request should be made with the ids of the employment types as a single string separated by \",\" as value to query parameter \"employment_type\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_78",
+        "display_text": "When a salary range is clicked, an HTTP GET request should be made with the id of the salaryRange as value to query parameter \"minimum_package\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_79",
+        "display_text": "When all filters are used, an HTTP GET request should be made to jobsApiUrl with all the query parameters and their values",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_80",
+        "display_text": "When a Job Item is clicked in Jobs Route, then the page should be navigated to the Job Item Details route with \"/jobs/:id\" as the URL path",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_81",
+        "display_text": "When the HTTP GET request made to the given Jobs API URL in the Jobs Route returns the jobs list as empty, then the page should consist of the HTML image element with alt attribute value as \"no jobs\" and src as the given no jobs view image URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_82",
+        "display_text": "When the HTTP GET request made to the given Jobs API URL in the Jobs Route returns the jobs list as empty, then the page should consist of an HTML main heading element with text content as \"No Jobs Found\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_83",
+        "display_text": "When the HTTP GET request made to the given Jobs API URL in the Jobs Route returns the jobs list as empty, then the page should consist of an HTML paragraph element with text content as \"We could not find any jobs. Try other filters\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_84",
+        "display_text": "When the HTTP GET request made to the given Profile API URL in the Jobs Route is unsuccessful, then the page should consist of the HTML button element with text content as the \"Retry\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_85",
+        "display_text": "When the HTTP GET request made to the given Jobs API URL in the Jobs Route is unsuccessful, then the page should consist of the HTML image element with alt as \"failure view\" and src as the given failure view image URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_86",
+        "display_text": "When the HTTP GET request made to the given Jobs API URL in the Jobs Route is unsuccessful, then the page should consist of the HTML main heading element with text content as \"Oops! Something Went Wrong\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_87",
+        "display_text": "When the HTTP GET request made to the given Jobs API URL in the Jobs Route is unsuccessful, then the page should consist of the HTML paragraph element with text content as \"We cannot seem to find the page you are looking for\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_88",
+        "display_text": "When the HTTP GET request made to the given Jobs API URL in the Jobs Route is unsuccessful, then the page should consist of the HTML button element with text content as the \"Retry\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_89",
+        "display_text": "When the HTTP GET request made to the given Profile API URL in the Jobs Route is unsuccessful and the \"Retry\" button is clicked, then an HTTP GET request should be made to the given Profile API URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_90",
+        "display_text": "When the HTTP GET request made to the given Jobs API URL in the Jobs Route is unsuccessful and the \"Retry\" button is clicked, then an HTTP GET request should be made to the given Jobs API URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_91",
+        "display_text": "When the website logo in the Header is clicked, then the page should be navigated to Home Route",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_92",
+        "display_text": "When the Home link in the Header is clicked, then the page should be navigated to Home Route",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_93",
+        "display_text": "When \"/login\" is provided as the URL path by an unauthenticated user, then the page should be navigated to the Login Route and consist of an HTML button element with text content as \"Login\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_94",
+        "display_text": "When \"/login\" is provided as the URL path by an authenticated user, then the page should be navigated to the Home Route and consist of an HTML main heading element with text content as \"Find The Job That Fits Your Life\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_95",
+        "display_text": "Login Route should consist of an HTML form element",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_96",
+        "display_text": "Login Route should consist of an HTML image element with alt attribute \"website logo\" and src as the given website logo image URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_97",
+        "display_text": "Login Route should consist of an HTML input element with label text as \"USERNAME\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_98",
+        "display_text": "Login Route should consist of an HTML input element with label text as \"USERNAME\" and type attribute value as \"text\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_99",
+        "display_text": "Login Route should consist of an HTML input element with label text as \"PASSWORD\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_100",
+        "display_text": "Login Route should consist of an HTML input element with label text as \"PASSWORD\" and type attribute value as \"password\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_101",
+        "display_text": "Login Route should consist of an HTML button element with text content as \"Login\" and type attribute value as \"submit\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_102",
+        "display_text": "When a non-empty value is provided in the HTML input element with the label text as \"USERNAME\", then the value provided should be displayed in the HTML input element",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_103",
+        "display_text": "When a non-empty value is provided in the HTML input element with the label text as \"PASSWORD\", then the value provided should be displayed in the HTML input element",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_104",
+        "display_text": "When non-empty values are provided for username and password input and the Login button is clicked, an HTTP POST request should be made to the given Login API URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_105",
+        "display_text": "When non-empty values are provided for username and password input and the Login button is clicked, then an HTTP POST request should be made to the given Login API URL with request object containing the keys \"username\" and \"password\" with the values provided respectively",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_106",
+        "display_text": "When username and password are empty and the Login button is clicked, then the page should consist of an HTML paragraph element with text content as error message received from the response and the page should not be navigated",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_107",
+        "display_text": "when a non-empty password is provided and the Login button is clicked with an empty username, then the page should consist of an HTML paragraph element with text content as error message received from the response and the page should not be navigated",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_108",
+        "display_text": "when a non-empty username is provided and the Login button is clicked with an empty password, then the page should consist of an HTML paragraph element with text content as error message received from the response and the page should not be navigated",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_109",
+        "display_text": "when invalid username and password are provided and the Login button is clicked, then the page should consist of an HTML paragraph element with text content as error message received from the response and the page should not be navigated",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_110",
+        "display_text": "when an invalid username and valid password are provided and the Login button is clicked, then the page should consist of an HTML paragraph element with text content as an error message received from the response and the page should not be navigated",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_111",
+        "display_text": "when a valid username and an invalid password are provided and the Login button is clicked, then the page should consist of an HTML paragraph element with text content as error message received from the response and the page should not be navigated",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_112",
+        "display_text": "When valid username and password are provided and the Login button is clicked, then the Cookies.set() method should be called with three arguments - \"jwt_token\" string as the first argument, JWT token value as the second argument, and expiry days as the third argument",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_113",
+        "display_text": "When valid username and password are provided and the Login button is clicked, then the history.replace() method should be called with the argument \"/\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_114",
+        "display_text": "When valid username and password are provided and the login button is clicked, then the page should be navigated to the Home Route",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_115",
+        "display_text": "When a random path is provided as the URL path, then the page should be navigated to the Not Found Route and should consist of an HTML image element with alt attribute value as \"not found\" and src as the given not found image URL",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_116",
+        "display_text": "When a random path is provided as the URL path, then the page should consist of an HTML main heading element with text content as \"Page Not Found\"",
+        "weightage": 5
+      },
+      {
+        "test_case_enum": "RJSCPAW11J_TEST_117",
+        "display_text": "When a random path is provided as the URL path, then the page should consist of an HTML paragraph element with text content as \"We are sorry, the page you requested could not be found\"",
+        "weightage": 5
+      }
+    ],
+    "multimedia": [],
+    "solutions_metadata": [],
+    "hints": []
+  }
+]
